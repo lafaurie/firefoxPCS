@@ -1,0 +1,19 @@
+{
+ "name":"Memos",
+ "version": "1.1",
+ "description": "A simple memo taking app",
+ "launch_path": "/index.html",
+ "permissions": {
+	"storage": {
+		"description": "Required for storing and retrieving notes"
+	}
+ },
+ "developer": {
+	"name": "Jose Rolando Lafaurie Olivares",
+	"url": "https://www.facebook.com/lafaurieolivares"
+ },
+ "icons": {
+	"60": "/images/logo60.png",
+	"128": "/images/logo128.png"
+ }
+}
