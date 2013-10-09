@@ -2,60 +2,56 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="style/base.css"/>
-<link rel="stylesheet" type="text/css" href="style/ui.css"/>
-<link rel="stylesheet" type="text/css" href="style/building_blocks.css"/>
-<link rel="stylesheet" type="text/css" href="shared/style/headers.css"/>
-<link rel="stylesheet" type="text/css" href="shared/style_unstable/lists.css"/>
-<link rel="stylesheet" type="text/css" href="shared/style_unstable/toolbars.css"/>
-<link rel="stylesheet" type="text/css" href="shared/style/input_areas.css"/>
-<link rel="stylesheet" type="text/css" href="shared/style/confirm.css"/>
-<title>Telephone service</title>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+<link rel="stylesheet" type="text/css" href="style/headers.css" />
+<link rel="stylesheet" type="text/css" href="style_unstable/drawer.css" />
+<link href="icons/styles/action_icons.css" rel="stylesheet"
+	type="text/css">
+<link rel="stylesheet" href="icons/styles/media_icons.css">
+<link rel="stylesheet" href="icons/styles/comms_icons.css">
+<link rel="stylesheet" href="icons/styles/settings_icons.css">
+<!-- Transitions -->
+<link rel="stylesheet" href="util/transitions.css">
+
+<!-- Util CSS: some extra tricks -->
+<link rel="stylesheet" href="util/util.css">
+<link rel="stylesheet" href="util/fonts.css">
+
+<!-- Additional markup to make Building Blocks kind of cross browser -->
+<link rel="stylesheet" href="util/cross_browser.css">
+<title>Telephone card service</title>
 </head>
 <body role="application">
-<section role="region" id="unica-list">
-	<header>
-		<menu type="toolbar">
-			<a id="new-unica-contact" href="#"><span class="icon icon-add">add</span></a>	
-		</menu>
-		<h1>Telephone service</h1>
-	</header>
-	<section role="dial">
-	   <article> 
-		<form>
-				<select>
-					<option value="08008642200">Unica</option>
-					<option value="0800">Bajo Control</option>			
-				</select>
-				<input id="phone-service-number" name="phone-service-number" placeholder="Service number" type="tel" list="service"/>
-				<input id="phone-code-number" name="phone-code-number" placeholder="Code number" type="number"/>
-				<input id="phone-call-number" name="phone-call-number" placeholder="Number to call" type="number"/>
-			</form>
-	   </article>			
+	<section data-type="sidebar">
+		<header>
+			<menu type="toolbar">
+				<a href="#">add</a>
+			</menu>
+			<h1>Service name</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#content">Unica</a></li>
+				<li><a href="#content">Bajo control</a></li>
+			</ul>
+			<h2>Subtitle</h2>
+			<ul>
+				<li><a href="#content">Unica</a></li>
+				<li><a href="#content">Bajo control</a></li>
+			</ul>
+		</nav>
 	</section>
-	<article id="phoneServiceList" data-type="list">
-		
-	</article>
-</section>
-<section role="region" id="memo-detail" class="skin-dark hidden">
-	<header>
-		<button id="back-to-list"><span class="icon icon-back">back</span></button>
-		<menu type="toolbar">
-			<a id="share-service" href="#"><span class="icon icon-share">share</span></a>
-		</menu>
-		<form action="#">
-			<input id="phone-service-title" placeholder="Phone Service Title" required="required" type="text"/>
-			<button type="reset">Remove text</button>
-		</form>
-	</header>
-	<div role="toolbar">
-		<ul>
-			<li><button id="delete-phone" class="icon-delete">Delete</button></li>
-		</ul>
-	</div>
-	<form id="delete-phone-dialog" role="dialog" data-type="confirm" class="hidden">
-		
-	</form>
-</section>
+	<section role="region" id="drawer">
+		<header>
+			<a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+			<a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+			<menu type="toolbar">
+             <a href="#"><span class="icon icon-add">add</span></a>
+            </menu>
+			<h1>Firefox card service</h1>
+		</header>
+		<div role="main"></div>
+	</section>
 </body>
 </html>
